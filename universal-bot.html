@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal Bot — DarioCraft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/universal-bot.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Dario<span>Craft</span></a>
+      <nav class="nav-links">
+        <a href="index.html#logiciels">Logiciels</a>
+        <a href="index.html#jeux">Jeux</a>
+        <a href="index.html#about">À propos</a>
+      </nav>
+      <a href="index.html#contact" class="btn btn-outline">Contact</a>
+      <button class="nav-burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html#logiciels" class="mobile-link">Logiciels</a>
+      <a href="index.html#jeux" class="mobile-link">Jeux</a>
+      <a href="index.html#about" class="mobile-link">À propos</a>
+      <a href="index.html#contact" class="mobile-link mobile-contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="ub-hero">
+    <div class="hero-bg">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+    <div class="container ub-hero-inner">
+      <div class="ub-hero-text">
+        <a href="index.html#logiciels" class="ub-breadcrumb">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
+          Logiciels
+        </a>
+        <div class="ub-badges">
+          <span class="ub-badge ub-badge--free">Gratuit</span>
+          <span class="ub-badge ub-badge--win">Windows</span>
+          <span class="ub-badge ub-badge--ver">v2.0</span>
+        </div>
+        <h1 class="ub-title">Universal Bot</h1>
+        <p class="ub-subtitle">
+          Enregistrez vos actions sur Windows — clics, frappes clavier —
+          et rejouez-les automatiquement, selon des conditions précises
+          basées sur des pixels, l'horloge ou un timer.
+        </p>
+        <div class="ub-hero-actions">
+          <a href="#download" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Télécharger gratuitement
+          </a>
+          <a href="#guide" class="btn btn-ghost btn-lg">Voir le guide</a>
+        </div>
+        <p class="ub-req">Windows 10 / 11 · Aucune installation requise</p>
+      </div>
+      <div class="ub-hero-visual">
+        <div class="ub-mockup">
+          <div class="ub-mockup-bar">
+            <div class="ub-mockup-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="ub-mockup-title">Universal Bot</span>
+          </div>
+          <div class="ub-mockup-body">
+            <div class="ub-mockup-sidebar">
+              <div class="ub-mock-label">MACROS</div>
+              <div class="ub-mock-macro active">Macro 1</div>
+              <div class="ub-mock-macro">Macro 2</div>
+              <div class="ub-mock-add">+ Nouvelle macro</div>
+            </div>
+            <div class="ub-mockup-center">
+              <div class="ub-mock-label">ÉDITEUR D'ÉVÉNEMENTS</div>
+              <div class="ub-mock-events">
+                <div class="ub-mock-event">
+                  <span class="ub-mock-event-type click">CLIC</span>
+                  <span class="ub-mock-event-detail">x:542 y:318 · 120ms</span>
+                </div>
+                <div class="ub-mock-event">
+                  <span class="ub-mock-event-type key">TOUCHE</span>
+                  <span class="ub-mock-event-detail">Enter · 85ms</span>
+                </div>
+                <div class="ub-mock-event">
+                  <span class="ub-mock-event-type click">CLIC</span>
+                  <span class="ub-mock-event-detail">x:210 y:140 · 200ms</span>
+                </div>
+                <div class="ub-mock-event">
+                  <span class="ub-mock-event-type dbl">DBL-CLIC</span>
+                  <span class="ub-mock-event-detail">x:760 y:420 · 350ms</span>
+                </div>
+              </div>
+            </div>
+            <div class="ub-mockup-controls">
+              <div class="ub-mock-label">CONTRÔLES</div>
+              <div class="ub-mock-btn record">⏺ ENREGISTRER</div>
+              <div class="ub-mock-btn play">▶ LIRE</div>
+              <div class="ub-mock-btn watch">👁 SURVEILLER</div>
+            </div>
+          </div>
+          <div class="ub-mockup-console">
+            <span class="ub-console-prompt">›</span> Universal Bot v2.0 — Prêt.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="ub-features">
+    <div class="container">
+      <div class="ub-features-grid">
+
+        <div class="ub-feat">
+          <div class="ub-feat-icon ub-feat-icon--red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Enregistrement</h3>
+          <p>Capturez vos clics et frappes clavier en temps réel. Les doubles-clics sont détectés et fusionnés automatiquement.</p>
+        </div>
+
+        <div class="ub-feat">
+          <div class="ub-feat-icon ub-feat-icon--green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <polygon points="5 3 19 12 5 21 5 3" fill="currentColor" opacity=".3" stroke="none"/>
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </div>
+          <h3>Lecture</h3>
+          <p>Rejouez vos macros à la suite, en boucle ou une seule fois. Un décompte de 3 secondes vous laisse le temps de vous placer.</p>
+        </div>
+
+        <div class="ub-feat">
+          <div class="ub-feat-icon ub-feat-icon--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3>Surveillance</h3>
+          <p>Laissez Universal Bot surveiller vos conditions et déclencher les macros automatiquement, même sans vous.</p>
+        </div>
+
+        <div class="ub-feat">
+          <div class="ub-feat-icon ub-feat-icon--purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h3>Déclencheurs</h3>
+          <p>Pixel, horloge ou timer — combinez plusieurs conditions avec les opérateurs ET / OU pour un contrôle précis.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="ub-section ub-section--alt" id="apercu">
+    <div class="container">
+      <div class="ub-section-header">
+        <p class="section-label">Interface</p>
+        <h2 class="section-title">Aperçu de l'application</h2>
+      </div>
+      <div class="ub-screenshots">
+        <div class="ub-screenshot-wrap">
+          <img src="assets/screenshots/ub-main.png" alt="Interface principale de Universal Bot" class="ub-screenshot" onerror="this.parentElement.classList.add('ub-screenshot-placeholder')" />
+          <div class="ub-screenshot-ph-content">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Interface principale</span>
+          </div>
+          <p class="ub-screenshot-caption">Vue principale — Liste des macros · Éditeur d'événements · Contrôles</p>
+        </div>
+        <div class="ub-screenshot-wrap">
+          <img src="assets/screenshots/ub-triggers.png" alt="Fenêtre des déclencheurs" class="ub-screenshot" onerror="this.parentElement.classList.add('ub-screenshot-placeholder')" />
+          <div class="ub-screenshot-ph-content">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Fenêtre Déclencheurs</span>
+          </div>
+          <p class="ub-screenshot-caption">Fenêtre Déclencheurs — Configuration des conditions ET / OU</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE COMPLET -->
+  <section class="ub-section" id="guide">
+    <div class="container">
+      <div class="ub-section-header">
+        <p class="section-label">Documentation</p>
+        <h2 class="section-title">Guide d'utilisation</h2>
+        <p class="section-desc">Tout ce qu'il faut savoir pour utiliser Universal Bot.</p>
+      </div>
+
+      <div class="ub-guide">
+
+        <!-- NAV GUIDE -->
+        <nav class="ub-guide-nav">
+          <a href="#g-start" class="ub-guide-nav-link active">Démarrage rapide</a>
+          <a href="#g-record" class="ub-guide-nav-link">Enregistrement</a>
+          <a href="#g-play" class="ub-guide-nav-link">Mode Lire</a>
+          <a href="#g-watch" class="ub-guide-nav-link">Mode Surveiller</a>
+          <a href="#g-triggers" class="ub-guide-nav-link">Déclencheurs</a>
+          <a href="#g-options" class="ub-guide-nav-link">Options des macros</a>
+          <a href="#g-save" class="ub-guide-nav-link">Sauvegarde</a>
+          <a href="#g-tips" class="ub-guide-nav-link">Astuces</a>
+          <a href="#g-console" class="ub-guide-nav-link">Console</a>
+        </nav>
+
+        <!-- CONTENU -->
+        <div class="ub-guide-content">
+
+          <!-- DÉMARRAGE -->
+          <div class="ub-guide-block" id="g-start">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              Démarrage rapide
+            </h3>
+            <div class="ub-guide-body">
+              <p>Lancez l'application, puis repérez les trois zones de l'interface :</p>
+              <div class="ub-zones">
+                <div class="ub-zone">
+                  <div class="ub-zone-label">Gauche</div>
+                  <div class="ub-zone-desc">Liste de vos macros</div>
+                </div>
+                <div class="ub-zone-arrow">→</div>
+                <div class="ub-zone">
+                  <div class="ub-zone-label">Centre</div>
+                  <div class="ub-zone-desc">Détail des actions de la macro sélectionnée</div>
+                </div>
+                <div class="ub-zone-arrow">→</div>
+                <div class="ub-zone">
+                  <div class="ub-zone-label">Droite</div>
+                  <div class="ub-zone-desc">Boutons de contrôle</div>
+                </div>
+              </div>
+              <div class="ub-callout">
+                Par défaut, un projet vide avec une macro <strong>"Macro 1"</strong> est créé au lancement.
+              </div>
+            </div>
+          </div>
+
+          <!-- ENREGISTREMENT -->
+          <div class="ub-guide-block" id="g-record">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+              </span>
+              Créer et enregistrer une macro
+            </h3>
+            <div class="ub-guide-body">
+              <p>Une <strong>macro</strong> est une séquence d'actions (clics, touches) que vous pouvez rejouer à volonté.</p>
+
+              <h4>Enregistrer vos actions</h4>
+              <ol class="ub-steps">
+                <li>Cliquez sur <kbd>⏺ ENREGISTRER</kbd></li>
+                <li>Effectuez vos actions sur l'écran (clics, frappes clavier…)</li>
+                <li>Appuyez sur <kbd>Échap</kbd> ou cliquez <kbd>STOP</kbd> pour terminer</li>
+                <li>Vos actions apparaissent dans la liste centrale</li>
+              </ol>
+
+              <div class="ub-callout ub-callout--info">
+                Si des actions existaient déjà, l'application vous demande :<br/>
+                <strong>Oui</strong> = insérer les nouvelles actions après la sélection actuelle<br/>
+                <strong>Non</strong> = tout effacer et recommencer
+              </div>
+
+              <h4>Éditer une action manuellement</h4>
+              <ul class="ub-list">
+                <li><strong>Double-clic</strong> sur une action → ouvre l'éditeur de l'action</li>
+                <li><strong>Clic droit</strong> sur une action → menu : Modifier, Dupliquer, Déplacer, Supprimer</li>
+                <li>Menu <strong>Édition</strong> en haut → Annuler, Rétablir, et autres opérations</li>
+              </ul>
+
+              <h4>Gérer vos macros</h4>
+              <ul class="ub-list">
+                <li><kbd>+ Nouvelle macro</kbd> → ajoute une macro vide</li>
+                <li><strong>Double-clic</strong> sur le nom d'une macro → la renommer</li>
+                <li><kbd>✕</kbd> à droite du nom → supprimer la macro (impossible si c'est la seule)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- MODE LIRE -->
+          <div class="ub-guide-block" id="g-play">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </span>
+              Mode Lire
+            </h3>
+            <div class="ub-guide-body">
+              <p>Le bouton <kbd>▶ LIRE</kbd> lit toutes les macros du projet dans l'ordre.</p>
+
+              <div class="ub-compare">
+                <div class="ub-compare-col">
+                  <div class="ub-compare-label">Sans "Répéter en boucle"</div>
+                  <p>Lit Macro 1, puis Macro 2, puis Macro 3… et s'arrête à la fin.</p>
+                </div>
+                <div class="ub-compare-col ub-compare-col--accent">
+                  <div class="ub-compare-label">Avec "Répéter en boucle"</div>
+                  <p>Lit Macro 1, 2, 3… puis recommence depuis le début, indéfiniment, jusqu'au clic sur <kbd>STOP LECTURE</kbd>.</p>
+                </div>
+              </div>
+
+              <h4>Décompte avant lecture</h4>
+              <p>Un décompte de 3 secondes s'affiche (<em>Lecture dans 3… 2… 1…</em>) vous laissant le temps de cliquer dans la fenêtre cible. Cliquer à nouveau sur le bouton pendant ce décompte annule la lecture.</p>
+
+              <div class="ub-callout">
+                Cliquez <kbd>⏹ STOP LECTURE</kbd> à tout moment pour arrêter proprement à la fin de l'action en cours.
+              </div>
+            </div>
+          </div>
+
+          <!-- MODE SURVEILLER -->
+          <div class="ub-guide-block" id="g-watch">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              Mode Surveiller
+            </h3>
+            <div class="ub-guide-body">
+              <p>Le mode Surveiller parcourt toutes vos macros en boucle et les déclenche automatiquement selon les conditions configurées.</p>
+
+              <h4>Ce qui se passe</h4>
+              <div class="ub-flow">
+                <div class="ub-flow-step">Le moteur examine chaque macro dans l'ordre</div>
+                <div class="ub-flow-arrow">↓</div>
+                <div class="ub-flow-step ub-flow-step--skip">Macro inactive → ignorée</div>
+                <div class="ub-flow-arrow">↓</div>
+                <div class="ub-flow-step ub-flow-step--ok">Conditions remplies → macro lue en entier</div>
+                <div class="ub-flow-arrow">↓</div>
+                <div class="ub-flow-step">Dernière macro examinée → recommence depuis la première</div>
+              </div>
+
+              <div class="ub-callout ub-callout--warn">
+                <strong>LIRE</strong> et <strong>SURVEILLER</strong> ne peuvent pas tourner en même temps.
+              </div>
+            </div>
+          </div>
+
+          <!-- DÉCLENCHEURS -->
+          <div class="ub-guide-block" id="g-triggers">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </span>
+              Les déclencheurs
+            </h3>
+            <div class="ub-guide-body">
+              <p>Les déclencheurs définissent <strong>quand</strong> une macro doit se déclencher pendant la surveillance. Accédez-y via le bouton <kbd>⚡ Déclencheurs</kbd> dans le panneau droit.</p>
+
+              <div class="ub-trigger-cards">
+
+                <div class="ub-trigger-card">
+                  <div class="ub-trigger-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                    Déclencheur Pixel
+                  </div>
+                  <p>Surveille la couleur d'un pixel précis de l'écran. Configurez X, Y et la couleur de référence via <strong>"Capturer le pixel"</strong>.</p>
+                  <ul class="ub-list">
+                    <li><strong>Même couleur</strong> → se déclenche quand le pixel a exactement cette couleur</li>
+                    <li><strong>Couleur différente</strong> → se déclenche quand le pixel n'a PAS cette couleur</li>
+                  </ul>
+                  <p class="ub-trigger-note">Revérifié ~100 ms. Condition dynamique : peut redevenir vraie ou fausse à tout moment.</p>
+                </div>
+
+                <div class="ub-trigger-card">
+                  <div class="ub-trigger-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Déclencheur Horloge
+                  </div>
+                  <p>Déclenche à une heure précise (format HH:MM:SS, horloge système).</p>
+                  <ul class="ub-list">
+                    <li><strong>Déclencher</strong> → à partir de l'heure, condition vraie pour toute la session</li>
+                    <li><strong>Arrêter</strong> → avant l'heure vraie, à partir de l'heure fausse définitivement</li>
+                  </ul>
+                  <p class="ub-trigger-note">Si la surveillance démarre après l'heure configurée, la condition est immédiatement active.</p>
+                </div>
+
+                <div class="ub-trigger-card">
+                  <div class="ub-trigger-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.18-8.31"/></svg>
+                    Déclencheur Timer
+                  </div>
+                  <p>Compte à rebours qui démarre au moment où la surveillance commence.</p>
+                  <ul class="ub-list">
+                    <li><strong>Déclencher</strong> → quand le compte expire, condition vraie pour toute la session</li>
+                    <li><strong>Arrêter</strong> → pendant le compte vraie, à l'expiration fausse définitivement</li>
+                  </ul>
+                  <p class="ub-trigger-note">Un nouveau STOP puis SURVEILLER repart le timer de zéro.</p>
+                </div>
+
+              </div>
+
+              <h4>Combiner plusieurs déclencheurs</h4>
+              <div class="ub-compare">
+                <div class="ub-compare-col">
+                  <div class="ub-compare-label ub-compare-label--ou">OU</div>
+                  <p>La macro se déclenche si <strong>au moins un</strong> déclencheur est vrai.</p>
+                </div>
+                <div class="ub-compare-col ub-compare-col--accent">
+                  <div class="ub-compare-label">ET</div>
+                  <p>La macro se déclenche seulement si <strong>tous</strong> les déclencheurs sont vrais en même temps.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- OPTIONS MACROS -->
+          <div class="ub-guide-block" id="g-options">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </span>
+              Options des macros
+            </h3>
+            <div class="ub-guide-body">
+              <p>Ces options sont accessibles dans la fenêtre <kbd>⚡ Déclencheurs</kbd> de chaque macro.</p>
+              <div class="ub-options">
+                <div class="ub-option">
+                  <div class="ub-option-name">Macro active</div>
+                  <div class="ub-option-desc">Si décochée, la macro est complètement ignorée pendant la surveillance, même si ses déclencheurs seraient vérifiés.</div>
+                </div>
+                <div class="ub-option">
+                  <div class="ub-option-name">Répéter en boucle</div>
+                  <div class="ub-option-desc">Après lecture, les déclencheurs sont réévalués. Si la condition est encore vraie → repart. Si elle est devenue fausse → le moteur passe à la macro suivante.</div>
+                </div>
+                <div class="ub-option">
+                  <div class="ub-option-name">Démarrer au lancement</div>
+                  <div class="ub-option-desc">La macro démarre immédiatement quand la surveillance commence, sans attendre un déclencheur. Combinez avec "Répéter en boucle" et un déclencheur "Arrêter" pour créer un comportement : "tourne dès le départ, s'arrête quand [timer / horloge] se déclenche".</div>
+                </div>
+                <div class="ub-option">
+                  <div class="ub-option-name">Condition ET / OU</div>
+                  <div class="ub-option-desc">Visible uniquement quand la macro a au moins deux déclencheurs. Voir la section Déclencheurs ci-dessus.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SAUVEGARDE -->
+          <div class="ub-guide-block" id="g-save">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              </span>
+              Sauvegarde des projets
+            </h3>
+            <div class="ub-guide-body">
+              <p>Les projets se sauvegardent dans des fichiers <code>.ubot</code> (format texte JSON).</p>
+              <div class="ub-shortcuts-grid">
+                <div class="ub-shortcut">
+                  <kbd>Fichier › Enregistrer</kbd>
+                  <span>Sauvegarde rapide</span>
+                </div>
+                <div class="ub-shortcut">
+                  <kbd>Fichier › Enregistrer sous…</kbd>
+                  <span>Choisir l'emplacement</span>
+                </div>
+                <div class="ub-shortcut">
+                  <kbd>Fichier › Ouvrir…</kbd>
+                  <span>Charger un projet existant</span>
+                </div>
+                <div class="ub-shortcut">
+                  <kbd>Fichier › Nouveau</kbd>
+                  <span>Repartir de zéro</span>
+                </div>
+              </div>
+              <div class="ub-callout">
+                Un <strong>●</strong> devant le nom du projet dans la barre de titre indique des modifications non sauvegardées. L'application vous avertit si vous essayez de quitter sans sauvegarder.
+              </div>
+            </div>
+          </div>
+
+          <!-- ASTUCES -->
+          <div class="ub-guide-block" id="g-tips">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+              Astuces
+            </h3>
+            <div class="ub-guide-body">
+              <div class="ub-tips">
+                <div class="ub-tip"><span class="ub-tip-key">Double-clic sur un nom de macro</span><span class="ub-tip-val">Renommer la macro</span></div>
+                <div class="ub-tip"><span class="ub-tip-key">Double-clic sur une action</span><span class="ub-tip-val">Ouvrir l'éditeur de l'action</span></div>
+                <div class="ub-tip"><span class="ub-tip-key">Clic droit sur une action</span><span class="ub-tip-val">Menu contextuel complet</span></div>
+                <div class="ub-tip"><span class="ub-tip-key">Édition › Annuler</span><span class="ub-tip-val">Annuler la dernière modification</span></div>
+                <div class="ub-tip"><span class="ub-tip-key">Échap pendant l'enregistrement</span><span class="ub-tip-val">Stoppe l'enregistrement</span></div>
+                <div class="ub-tip"><span class="ub-tip-key">Doubles-clics souris</span><span class="ub-tip-val">Détectés et fusionnés automatiquement</span></div>
+                <div class="ub-tip"><span class="ub-tip-key">Délai [ms] de chaque action</span><span class="ub-tip-val">Éditable manuellement pour ajuster la vitesse</span></div>
+                <div class="ub-tip"><span class="ub-tip-key">Nombre de macros</span><span class="ub-tip-val">Un projet peut en contenir autant que nécessaire</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONSOLE -->
+          <div class="ub-guide-block" id="g-console">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              </span>
+              Messages de la console
+            </h3>
+            <div class="ub-guide-body">
+              <p>La bande verte en bas affiche l'état en temps réel. Voici les messages courants :</p>
+              <div class="ub-console-block">
+                <div class="ub-console-line">
+                  <span class="ub-console-msg">[Macro 1] Condition fausse → En attente</span>
+                  <span class="ub-console-exp">La macro attend que sa condition soit remplie.</span>
+                </div>
+                <div class="ub-console-line">
+                  <span class="ub-console-msg">[Macro 1] Déclencheurs validés → Lecture démarrée</span>
+                  <span class="ub-console-exp">La condition est vraie, la macro commence à jouer.</span>
+                </div>
+                <div class="ub-console-line">
+                  <span class="ub-console-msg">[Macro 1] Lecture terminée</span>
+                  <span class="ub-console-exp">La macro a fini de jouer.</span>
+                </div>
+                <div class="ub-console-line">
+                  <span class="ub-console-msg">[Macro 1] Déclencheurs invalidés → Lecture stoppée</span>
+                  <span class="ub-console-exp">La condition est redevenue fausse, la répétition s'arrête.</span>
+                </div>
+                <div class="ub-console-line">
+                  <span class="ub-console-msg">[Macro 1] Démarrage immédiat → Lecture démarrée</span>
+                  <span class="ub-console-exp">La macro démarre grâce à l'option "Démarrer au lancement".</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="ub-section ub-section--download" id="download">
+    <div class="container">
+      <div class="ub-download-box">
+        <div class="glow glow-contact"></div>
+        <div class="ub-download-inner">
+          <div class="ub-download-info">
+            <p class="section-label">Téléchargement</p>
+            <h2 class="ub-download-title">Universal Bot v2.0</h2>
+            <div class="ub-download-meta">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                Windows 10 / 11
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                21 MB
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                Gratuit
+              </span>
+            </div>
+          </div>
+          <div class="ub-download-btns">
+            <a href="downloads/UniversalBot.exe" download class="btn btn-primary btn-lg ub-download-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Télécharger .exe
+            </a>
+            <a href="downloads/UniversalBot.zip" download class="btn btn-ghost ub-download-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              .zip
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="nav-logo">Dario<span>Craft</span></a>
+      <p class="footer-copy">&copy; 2025 DarioCraft — Tous droits réservés</p>
+      <div class="footer-links">
+        <a href="index.html#logiciels">Logiciels</a>
+        <a href="index.html#jeux">Jeux</a>
+        <a href="index.html#about">À propos</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-backdrop"></div>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="lightbox-inner">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/universal-bot.js"></script>
+</body>
+</html>

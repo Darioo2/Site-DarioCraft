@@ -1,0 +1,7 @@
+# Fichiers téléchargeables — distribués via GitHub Releases
+downloads/
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini

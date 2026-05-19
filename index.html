@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DarioCraft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Dario<span>Craft</span></a>
+      <nav class="nav-links">
+        <a href="#logiciels">Logiciels</a>
+        <a href="#jeux">Jeux</a>
+        <a href="#about">À propos</a>
+      </nav>
+      <a href="#contact" class="btn btn-outline">Contact</a>
+      <button class="nav-burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#logiciels" class="mobile-link">Logiciels</a>
+      <a href="#jeux" class="mobile-link">Jeux</a>
+      <a href="#about" class="mobile-link">À propos</a>
+      <a href="#contact" class="mobile-link mobile-contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Développeur indépendant</p>
+      <h1 class="hero-title">Bienvenue sur<br /><span>DarioCraft</span></h1>
+      <p class="hero-subtitle">
+        Je conçois des logiciels utiles et des jeux pensés pour être simples,
+        efficaces et agréables à utiliser.
+      </p>
+      <div class="hero-actions">
+        <a href="#logiciels" class="btn btn-outline">Voir mes logiciels</a>
+        <a href="#jeux" class="btn btn-outline">Explorer les jeux</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- LOGICIELS -->
+  <section class="section" id="logiciels">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Applications</p>
+        <h2 class="section-title">Logiciels</h2>
+        <p class="section-desc">Des outils Windows pensés pour simplifier votre quotidien.</p>
+      </div>
+      <div class="cards-grid cards-grid--2">
+
+        <div class="card card--featured">
+          <div class="card-badge">Gratuit</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Universal Bot</h3>
+            <p class="card-meta">Application Windows &nbsp;·&nbsp; v2.0</p>
+            <p class="card-desc">
+              Enregistrez vos clics et frappes clavier, puis rejouez-les automatiquement
+              selon des conditions précises — pixel, horloge, timer.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Windows</span>
+              <span class="tag">Automatisation</span>
+              <span class="tag">Macros</span>
+            </div>
+          </div>
+          <div class="card-footer" style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="universal-bot.html" class="btn btn-ghost btn-sm">En savoir plus</a>
+            <a href="universal-bot.html#download" class="btn btn-primary btn-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Télécharger
+            </a>
+          </div>
+        </div>
+
+        <div class="card card--soon">
+          <div class="card-soon-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Prochainement</h3>
+          <p class="card-desc">Un nouveau logiciel est en cours de développement. Restez à l'écoute.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- JEUX -->
+  <section class="section section--alt" id="jeux">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Mini-jeux</p>
+        <h2 class="section-title">Jeux</h2>
+        <p class="section-desc">Des jeux jouables directement dans le navigateur.</p>
+      </div>
+      <div class="cards-grid cards-grid--games">
+
+        <div class="card card--game card--playable">
+          <div class="card-badge card-badge--play">Jouable</div>
+          <div class="card-game-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="8" cy="18" r="3" fill="currentColor" opacity=".3"/>
+              <circle cx="8" cy="12" r="3" fill="currentColor" opacity=".6"/>
+              <circle cx="8" cy="6" r="3" fill="currentColor"/>
+              <circle cx="16" cy="18" r="3" fill="#e74c3c" opacity=".3"/>
+              <circle cx="16" cy="12" r="3" fill="#e74c3c" opacity=".6"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Puissance 4</h3>
+          <p class="card-desc">Affrontez l'IA ou un ami en local dans ce classique stratégique.</p>
+          <a href="games/puissance4/index.html" class="btn btn-primary btn-sm">Jouer</a>
+        </div>
+
+        <div class="card card--game card--coming">
+          <div class="card-badge card-badge--soon">Bientôt</div>
+          <div class="card-game-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="3 17 9 11 13 15 21 7"/>
+              <polyline points="14 7 21 7 21 14"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Snake</h3>
+          <p class="card-desc">Le grand classique : guidez votre serpent sans vous mordre la queue.</p>
+          <span class="btn btn-ghost btn-sm btn--disabled">Bientôt disponible</span>
+        </div>
+
+        <div class="card card--game card--coming">
+          <div class="card-badge card-badge--soon">Bientôt</div>
+          <div class="card-game-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="18" width="4" height="2" rx="1" fill="currentColor" opacity=".5"/>
+              <rect x="9" y="14" width="4" height="2" rx="1" fill="currentColor" opacity=".7"/>
+              <rect x="15" y="10" width="4" height="2" rx="1" fill="currentColor"/>
+              <line x1="5" y1="18" x2="5" y2="6"/>
+              <line x1="11" y1="14" x2="11" y2="6"/>
+              <line x1="17" y1="10" x2="17" y2="6"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Casse-brique</h3>
+          <p class="card-desc">Détruisez toutes les briques avec une balle et une raquette.</p>
+          <span class="btn btn-ghost btn-sm btn--disabled">Bientôt disponible</span>
+        </div>
+
+        <div class="card card--game card--coming">
+          <div class="card-badge card-badge--soon">Bientôt</div>
+          <div class="card-game-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Space Fighter</h3>
+          <p class="card-desc">Pilotez votre vaisseau et éliminez les envahisseurs galactiques.</p>
+          <span class="btn btn-ghost btn-sm btn--disabled">Bientôt disponible</span>
+        </div>
+
+        <div class="card card--game card--coming">
+          <div class="card-badge card-badge--soon">Bientôt</div>
+          <div class="card-game-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="12" width="9" height="9" rx="1"/>
+              <rect x="13" y="12" width="9" height="9" rx="1"/>
+              <rect x="2" y="3" width="9" height="7" rx="1"/>
+              <rect x="13" y="3" width="9" height="7" rx="1"/>
+              <line x1="6" y1="15" x2="6" y2="15" stroke-width="3" stroke-linecap="round"/>
+              <line x1="17" y1="6" x2="17" y2="6" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Bataille Navale</h3>
+          <p class="card-desc">Coulez la flotte adverse avant qu'elle ne coule la vôtre.</p>
+          <span class="btn btn-ghost btn-sm btn--disabled">Bientôt disponible</span>
+        </div>
+
+        <div class="card card--game card--coming">
+          <div class="card-badge card-badge--soon">Bientôt</div>
+          <div class="card-game-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 3h6l-1 4H10L9 3z"/>
+              <path d="M10 7c0 2-2 3-2 5h8c0-2-2-3-2-5"/>
+              <rect x="7" y="12" width="10" height="2" rx="1"/>
+              <rect x="6" y="18" width="12" height="2" rx="1"/>
+              <line x1="12" y1="14" x2="12" y2="18"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Échecs</h3>
+          <p class="card-desc">Affrontez une IA ou un adversaire dans le jeu de stratégie ultime.</p>
+          <span class="btn btn-ghost btn-sm btn--disabled">Bientôt disponible</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-text">
+          <p class="section-label">Qui suis-je ?</p>
+          <h2 class="section-title">À propos</h2>
+          <p class="about-desc">
+            Développeur passionné, je crée des logiciels et des jeux dans mon temps libre.
+            Mon objectif est de produire des outils simples, propres et vraiment utiles —
+            sans superflu.
+          </p>
+          <p class="about-desc">
+            DarioCraft, c'est mon espace de création : un endroit où je partage
+            mes projets librement et gratuitement.
+          </p>
+          <div class="about-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">HTML / CSS / JS</span>
+            <span class="stack-tag">Windows</span>
+            <span class="stack-tag">Open source</span>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-card-inner">
+            <div class="code-snippet">
+              <div class="code-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <pre><code><span class="c-purple">const</span> <span class="c-white">dario</span> <span class="c-purple">=</span> <span class="c-white">{</span>
+  <span class="c-blue">role</span><span class="c-white">:</span> <span class="c-green">"Développeur"</span><span class="c-white">,</span>
+  <span class="c-blue">focus</span><span class="c-white">:</span> <span class="c-green">"Outils & Jeux"</span><span class="c-white">,</span>
+  <span class="c-blue">motto</span><span class="c-white">:</span> <span class="c-green">"Simple. Utile. Libre."</span>
+<span class="c-white">};</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--contact" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="glow glow-contact"></div>
+        <p class="section-label">Parlons-en</p>
+        <h2 class="contact-title">Une question ? Un projet ?</h2>
+        <p class="contact-desc">N'hésitez pas à me contacter, je réponds toujours.</p>
+        <a href="mailto:contact@dariocraft.dev" class="btn btn-primary btn-lg">
+          Envoyer un message
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#" class="nav-logo">Dario<span>Craft</span></a>
+      <p class="footer-copy">&copy; 2025 DarioCraft — Tous droits réservés</p>
+      <div class="footer-links">
+        <a href="#logiciels">Logiciels</a>
+        <a href="#jeux">Jeux</a>
+        <a href="#about">À propos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
