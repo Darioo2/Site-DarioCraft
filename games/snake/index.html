@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake — DarioCraft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0a0a0f;
+      --accent:     #6C63FF;
+      --accent-2:   #8b85ff;
+      --text:       #e8e8f0;
+      --text-muted: #8888aa;
+      --border-2:   rgba(255,255,255,0.06);
+      --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow: hidden;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      background: rgba(10,10,15,0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-2);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      gap: 16px;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+    .nav-logo span { color: var(--accent); }
+
+    .nav-center {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-game-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+    }
+    .nav-tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 50px;
+      background: rgba(93,222,139,0.12);
+      color: #5dde8b;
+      border: 1px solid rgba(93,222,139,0.25);
+    }
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 50px;
+      border: 1px solid var(--border-2);
+      background: rgba(255,255,255,0.04);
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+    .nav-back:hover {
+      color: var(--text);
+      border-color: rgba(108,99,255,0.3);
+      background: rgba(108,99,255,0.07);
+    }
+
+    /* ── GAME AREA ── */
+    .game-wrapper {
+      position: fixed;
+      top: 60px; left: 0; right: 0; bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+    }
+    .game-glow {
+      position: absolute;
+      width: 700px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(108,99,255,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .game-canvas-wrapper {
+      position: relative;
+      z-index: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(108,99,255,0.18);
+      box-shadow: 0 0 0 1px rgba(108,99,255,0.08), 0 24px 80px rgba(0,0,0,0.6);
+      width: 600px;
+      height: 700px;
+    }
+    #game {
+      width: 600px;
+      height: 700px;
+      background: #1a1a2e;
+    }
+
+    @media (max-height: 840px) {
+      .game-canvas-wrapper, #game { width: 514px; height: 600px; }
+    }
+    @media (max-height: 720px) {
+      .game-canvas-wrapper, #game { width: 429px; height: 500px; }
+    }
+    @media (max-width: 640px) {
+      .game-canvas-wrapper, #game {
+        width: calc(100vw - 24px);
+        height: calc((100vw - 24px) * 700 / 600);
+      }
+      .nav-game-name { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="../../index.html" class="nav-logo">Dario<span>Craft</span></a>
+      <div class="nav-center">
+        <span class="nav-game-name">Snake</span>
+        <span class="nav-tag">Solo</span>
+      </div>
+      <a href="../../index.html#jeux" class="nav-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Retour aux jeux
+      </a>
+    </div>
+  </header>
+
+  <!-- JEU -->
+  <div class="game-wrapper">
+    <div class="game-glow"></div>
+    <div class="game-canvas-wrapper">
+      <div id="game"></div>
+    </div>
+  </div>
+
+  <!--
+    MISE À JOUR DU JEU :
+    1. Dans le dossier source, exécuter : npm run build
+    2. Remplacer game/assets/snake.js par le nouveau dist/assets/snake.js
+  -->
+  <script src="game/assets/snake.js"></script>
+
+</body>
+</html>
