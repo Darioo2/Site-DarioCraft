@@ -112,8 +112,8 @@
     }
     .game-glow {
       position: absolute;
-      width: 760px;
-      height: 600px;
+      width: 950px;
+      height: 750px;
       background: radial-gradient(ellipse, rgba(108,99,255,0.1) 0%, transparent 70%);
       pointer-events: none;
     }
@@ -124,23 +124,26 @@
       overflow: hidden;
       border: 1px solid rgba(108,99,255,0.18);
       box-shadow: 0 0 0 1px rgba(108,99,255,0.08), 0 24px 80px rgba(0,0,0,0.6);
-      width: 760px;
-      height: 600px;
+      width: 950px;
+      height: 750px;
     }
     #game {
-      width: 760px;
-      height: 600px;
+      width: 950px;
+      height: 750px;
       background: #1a1a2e;
     }
 
     /* Réduction si écran trop petit */
-    @media (max-height: 740px) {
+    @media (max-height: 880px) {
+      .game-canvas-wrapper, #game { width: 760px; height: 600px; }
+    }
+    @media (max-height: 730px) {
       .game-canvas-wrapper, #game { width: 608px; height: 480px; }
     }
-    @media (max-height: 620px) {
+    @media (max-height: 610px) {
       .game-canvas-wrapper, #game { width: 507px; height: 400px; }
     }
-    @media (max-width: 800px) {
+    @media (max-width: 990px) {
       .game-canvas-wrapper, #game {
         width: calc(100vw - 24px);
         height: calc((100vw - 24px) * 600 / 760);
