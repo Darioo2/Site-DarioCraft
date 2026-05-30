@@ -219,11 +219,54 @@
 }
 .ssh-color-item span { color: var(--text-muted); }
 
-/* ── SCREENSHOTS 6 items — grille 2×3 ───── */
+/* ── SCREENSHOTS — grille 3×2 ───────────── */
 .ssh-screenshots {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* Dernière cellule : 2 captures Google Calendar empilées */
+.ssh-gcal-duo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ssh-gcal-duo .ub-screenshot-wrap {
+  flex: none;
+}
+
+/* Screenshot inline dans le guide (float latéral) */
+.ssh-guide-img {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  float: right;
+  margin: 0 0 16px 24px;
+  cursor: zoom-in;
+  transition: border-color 0.2s ease;
+}
+.ssh-guide-img:hover {
+  border-color: rgba(108,99,255,0.3);
+}
+.ssh-guide-img-caption {
+  float: right;
+  clear: right;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  opacity: 0.55;
+  text-align: right;
+  margin: -12px 0 16px 0;
+  max-width: 340px;
+}
+.ssh-guide-clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 /* ── DATA TABLE ──────────────────────────── */
@@ -256,8 +299,14 @@
 }
 
 /* ── RESPONSIVE ─────────────────────────── */
+@media (max-width: 900px) {
+  .ssh-screenshots { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 700px) {
   .ssh-screenshots { grid-template-columns: 1fr; }
+  .ssh-gcal-duo { flex-direction: row; }
+  .ssh-guide-img { float: none; max-width: 100%; margin: 0 0 12px 0; }
+  .ssh-guide-img-caption { float: none; text-align: left; max-width: 100%; }
   .ssh-color-legend { grid-template-columns: 1fr 1fr; }
   .ssh-step { grid-template-columns: 30px 1fr; }
   .ssh-data-row { grid-template-columns: 1fr; }

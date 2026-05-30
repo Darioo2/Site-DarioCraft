@@ -186,8 +186,10 @@
         <p class="section-label">Interface</p>
         <h2 class="section-title">Aperçu de l'application</h2>
       </div>
+      <!-- Grille 3×2 — Row 1 : app (portrait) · Row 2 : app + duo Google Calendar -->
       <div class="ssh-screenshots">
 
+        <!-- ── Ligne 1 ── -->
         <div class="ub-screenshot-wrap">
           <img src="assets/screenshots/ssh-connexions.png" alt="Onglet Connexions — RATP et Google Calendar" class="ub-screenshot" />
           <div class="ub-screenshot-ph-content">
@@ -215,6 +217,7 @@
           <p class="ub-screenshot-caption">Aperçu — Calendrier mensuel avec code couleur par type de service</p>
         </div>
 
+        <!-- ── Ligne 2 ── -->
         <div class="ub-screenshot-wrap">
           <img src="assets/screenshots/ssh-parametres.png" alt="Onglet Paramètres — thème, démarrage, notifications" class="ub-screenshot" />
           <div class="ub-screenshot-ph-content">
@@ -233,13 +236,16 @@
           <p class="ub-screenshot-caption">Journal — Logs de synchronisation horodatés en temps réel</p>
         </div>
 
-        <div class="ub-screenshot-wrap">
-          <img src="assets/screenshots/ssh-google-calendar.png" alt="Résultat dans Google Calendar — événements RATP synchronisés" class="ub-screenshot" />
-          <div class="ub-screenshot-ph-content">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>Résultat Google Calendar</span>
+        <!-- Dernière cellule : 2 captures Google Calendar empilées -->
+        <div class="ssh-gcal-duo">
+          <div class="ub-screenshot-wrap">
+            <img src="assets/screenshots/ssh-google-calendar.png" alt="Google Calendar — semaine du 8 juin 2026" class="ub-screenshot" />
+            <p class="ub-screenshot-caption">Google Calendar — Services RO004 et E21 synchronisés (semaine 24)</p>
           </div>
-          <p class="ub-screenshot-caption">Résultat — Événements RATP synchronisés dans Google Calendar</p>
+          <div class="ub-screenshot-wrap">
+            <img src="assets/screenshots/ssh-google-calendar-2.png" alt="Google Calendar — semaine du 29 mai 2026" class="ub-screenshot" />
+            <p class="ub-screenshot-caption">Google Calendar — Services C21 et RO001 synchronisés (semaine 22)</p>
+          </div>
         </div>
 
       </div>
@@ -393,7 +399,10 @@
               </span>
               Lancer une synchronisation
             </h3>
-            <div class="ub-guide-body">
+            <div class="ub-guide-body ssh-guide-clearfix">
+              <img src="assets/screenshots/ssh-synchronisation.png" alt="Onglet Synchronisation" class="ssh-guide-img" />
+              <p class="ssh-guide-img-caption">Onglet Synchronisation</p>
+
               <h4>Sync complète (première fois ou remise à zéro)</h4>
               <ol class="ub-steps">
                 <li>Onglet <kbd>Synchronisation</kbd> → section <strong>Synchronisation manuelle</strong>.</li>
@@ -402,15 +411,15 @@
                 <li>Suivez la progression dans l'onglet <kbd>Journal</kbd>.</li>
               </ol>
               <div class="ub-callout">
-                Durée estimée : <strong>5 à 10 minutes</strong> pour 10 mois de planning. La barre de progression indique le jour en cours de traitement.
+                Durée estimée : <strong>5 à 10 minutes</strong> pour 10 mois de planning. La barre de progression affiche le jour en cours de traitement. L'onglet Journal détaille chaque événement créé ou mis à jour.
               </div>
 
               <h4>Sync rapide (usage quotidien)</h4>
-              <p>Même procédure avec une plage de 7 jours — prend environ 1 à 2 minutes.</p>
+              <p>Même procédure avec une plage de 7 jours — prend environ 1 à 2 minutes. Idéal pour vérifier que les prochains jours sont bien à jour dans Google Calendar.</p>
 
               <h4>Sync automatique</h4>
-              <p>Le logiciel se synchronise automatiquement selon les horaires configurés dans l'onglet <kbd>Synchronisation</kbd> → <strong>Synchronisation automatique</strong>. Vous pouvez activer/désactiver chaque horaire indépendamment.</p>
-              <p>Les dates de la dernière sync et de la prochaine sync auto sont affichées sous les horaires.</p>
+              <p>Configurez deux horaires (par défaut <strong>5h00</strong> et <strong>14h00</strong>) dans la section <strong>Synchronisation automatique</strong>. Chaque horaire peut être activé/désactivé indépendamment.</p>
+              <p>Les dates de la <em>dernière sync</em> et de la <em>prochaine sync auto</em> sont affichées en bas de la section pour vérifier que tout tourne correctement.</p>
             </div>
           </div>
 
@@ -422,7 +431,10 @@
               </span>
               Onglet Aperçu
             </h3>
-            <div class="ub-guide-body">
+            <div class="ub-guide-body ssh-guide-clearfix">
+              <img src="assets/screenshots/ssh-apercu.png" alt="Onglet Aperçu — calendrier mensuel" class="ssh-guide-img" />
+              <p class="ssh-guide-img-caption">Onglet Aperçu — Juin 2026</p>
+
               <p>L'onglet Aperçu affiche votre planning sous forme de calendrier mensuel. Naviguez avec les flèches <kbd>◀</kbd> <kbd>▶</kbd> pour changer de mois.</p>
               <p>Cliquez sur n'importe quel jour pour afficher le détail : code service, type, catégorie, horaires de début/fin.</p>
 

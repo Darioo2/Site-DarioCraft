@@ -68,6 +68,16 @@ document.querySelectorAll('.ub-screenshot-wrap').forEach(wrap => {
   });
 });
 
+/* Images inline dans le guide */
+document.querySelectorAll('.ssh-guide-img').forEach(img => {
+  img.addEventListener('click', () => {
+    const caption = img.nextElementSibling?.classList.contains('ssh-guide-img-caption')
+      ? img.nextElementSibling.textContent
+      : img.alt;
+    openLightbox(img.src, img.alt, caption);
+  });
+});
+
 backdrop.addEventListener('click', closeLightbox);
 lightboxClose.addEventListener('click', closeLightbox);
 document.addEventListener('keydown', e => {
