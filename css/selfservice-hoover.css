@@ -219,14 +219,11 @@
 }
 .ssh-color-item span { color: var(--text-muted); }
 
-/* ── SCREENSHOTS 5 items ─────────────────── */
+/* ── SCREENSHOTS 6 items — grille 2×3 ───── */
 .ssh-screenshots {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-}
-.ssh-screenshots .ub-screenshot-wrap:last-child {
-  grid-column: 1 / -1;
 }
 
 /* ── DATA TABLE ──────────────────────────── */
@@ -261,7 +258,6 @@
 /* ── RESPONSIVE ─────────────────────────── */
 @media (max-width: 700px) {
   .ssh-screenshots { grid-template-columns: 1fr; }
-  .ssh-screenshots .ub-screenshot-wrap:last-child { grid-column: auto; }
   .ssh-color-legend { grid-template-columns: 1fr 1fr; }
   .ssh-step { grid-template-columns: 30px 1fr; }
   .ssh-data-row { grid-template-columns: 1fr; }
