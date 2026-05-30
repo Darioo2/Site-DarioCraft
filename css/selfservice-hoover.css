@@ -1,0 +1,269 @@
+/* ============================================
+   SELFSERVICE HOOVER PAGE
+   Styles spécifiques à la page SSH.
+   Les composants partagés (lightbox, guide,
+   screenshots, features, download…) proviennent
+   de css/universal-bot.css.
+   ============================================ */
+
+/* ── BADGE RATP ──────────────────────────── */
+.ub-badge--ratp {
+  background: rgba(0, 114, 186, 0.12);
+  color: #74c0fc;
+  border-color: rgba(0, 114, 186, 0.3);
+}
+
+/* ── HERO MOCKUP : aperçu calendrier ─────── */
+.ssh-mockup {
+  background: #0d0d1a;
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(108,99,255,0.08);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.ssh-mockup-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--border-2);
+}
+.ssh-mockup-dots { display: flex; gap: 6px; }
+.ssh-mockup-dots span {
+  width: 9px; height: 9px; border-radius: 50%;
+}
+.ssh-mockup-dots span:nth-child(1) { background: #ff5f57; }
+.ssh-mockup-dots span:nth-child(2) { background: #ffbd2e; }
+.ssh-mockup-dots span:nth-child(3) { background: #28c840; }
+.ssh-mockup-wintitle {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin: 0 auto;
+}
+
+.ssh-mockup-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-2);
+  background: rgba(255,255,255,0.02);
+}
+.ssh-mock-tab {
+  padding: 8px 12px;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+.ssh-mock-tab.active {
+  color: var(--accent-2);
+  border-bottom-color: var(--accent);
+}
+
+.ssh-mockup-body {
+  padding: 10px 12px;
+}
+
+.ssh-cal-month {
+  text-align: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.ssh-cal-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin-bottom: 5px;
+}
+.ssh-cal-dow {
+  text-align: center;
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  opacity: 0.5;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.ssh-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.ssh-day {
+  border-radius: 5px;
+  padding: 4px 3px 3px;
+  min-height: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ssh-day-num {
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+.ssh-day-code {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.ssh-day-time {
+  font-size: 0.52rem;
+  opacity: 0.7;
+}
+
+/* Couleurs identiques à l'app */
+.ssh-day--jour  { background: rgba(200,60,80,0.25);  border: 1px solid rgba(200,60,80,0.35); }
+.ssh-day--jour  .ssh-day-code  { color: #ef8080; }
+.ssh-day--jour  .ssh-day-time  { color: #ef8080; }
+
+.ssh-day--nuit  { background: rgba(108,99,255,0.22); border: 1px solid rgba(108,99,255,0.35); }
+.ssh-day--nuit  .ssh-day-code  { color: var(--accent-2); }
+.ssh-day--nuit  .ssh-day-time  { color: var(--accent-2); }
+
+.ssh-day--mixte { background: rgba(39,174,96,0.2);   border: 1px solid rgba(39,174,96,0.35); }
+.ssh-day--mixte .ssh-day-code  { color: #5dde8b; }
+.ssh-day--mixte .ssh-day-time  { color: #5dde8b; }
+
+.ssh-day--repos { background: rgba(30,60,120,0.3);   border: 1px solid rgba(52,100,219,0.3); }
+.ssh-day--repos .ssh-day-code  { color: #74c0fc; }
+
+.ssh-day--conge { background: rgba(255,193,7,0.15);  border: 1px solid rgba(255,193,7,0.3); }
+.ssh-day--conge .ssh-day-code  { color: #ffd54f; }
+
+.ssh-day--empty { background: transparent; border: 1px solid transparent; }
+
+.ssh-mockup-footer {
+  display: flex;
+  gap: 10px;
+  padding: 8px 12px;
+  border-top: 1px solid var(--border-2);
+  flex-wrap: wrap;
+}
+.ssh-legend-dot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
+.ssh-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+}
+
+/* ── STEPS DE CONFIGURATION ─────────────── */
+.ssh-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ssh-step {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+.ssh-step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(108,99,255,0.15);
+  border: 1px solid rgba(108,99,255,0.3);
+  color: var(--accent-2);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ssh-step-body {}
+.ssh-step-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+/* ── LÉGENDE COULEURS (guide aperçu) ─────── */
+.ssh-color-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+}
+.ssh-color-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-2);
+  font-size: 0.84rem;
+}
+.ssh-color-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.ssh-color-item span { color: var(--text-muted); }
+
+/* ── SCREENSHOTS 5 items ─────────────────── */
+.ssh-screenshots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.ssh-screenshots .ub-screenshot-wrap:last-child {
+  grid-column: 1 / -1;
+}
+
+/* ── DATA TABLE ──────────────────────────── */
+.ssh-data-table {
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  font-size: 0.84rem;
+}
+.ssh-data-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--border-2);
+  align-items: start;
+}
+.ssh-data-row:last-child { border-bottom: none; }
+.ssh-data-key {
+  padding: 12px 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--accent-2);
+  border-right: 1px solid var(--border-2);
+  background: rgba(255,255,255,0.02);
+}
+.ssh-data-val {
+  padding: 12px 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── RESPONSIVE ─────────────────────────── */
+@media (max-width: 700px) {
+  .ssh-screenshots { grid-template-columns: 1fr; }
+  .ssh-screenshots .ub-screenshot-wrap:last-child { grid-column: auto; }
+  .ssh-color-legend { grid-template-columns: 1fr 1fr; }
+  .ssh-step { grid-template-columns: 30px 1fr; }
+  .ssh-data-row { grid-template-columns: 1fr; }
+  .ssh-data-key { border-right: none; border-bottom: 1px solid var(--border-2); }
+}

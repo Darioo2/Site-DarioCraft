@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SelfService Hoover — DarioCraft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/universal-bot.css" />
+  <link rel="stylesheet" href="css/selfservice-hoover.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Dario<span>Craft</span></a>
+      <nav class="nav-links">
+        <a href="index.html#logiciels">Logiciels</a>
+        <a href="index.html#jeux">Jeux</a>
+        <a href="index.html#about">À propos</a>
+      </nav>
+      <a href="index.html#contact" class="btn btn-outline">Contact</a>
+      <button class="nav-burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html#logiciels" class="mobile-link">Logiciels</a>
+      <a href="index.html#jeux" class="mobile-link">Jeux</a>
+      <a href="index.html#about" class="mobile-link">À propos</a>
+      <a href="index.html#contact" class="mobile-link mobile-contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="ub-hero">
+    <div class="hero-bg">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+    <div class="container ub-hero-inner">
+      <div class="ub-hero-text">
+        <a href="index.html#logiciels" class="ub-breadcrumb">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
+          Logiciels
+        </a>
+        <div class="ub-badges">
+          <span class="ub-badge ub-badge--free">Gratuit</span>
+          <span class="ub-badge ub-badge--win">Windows</span>
+          <span class="ub-badge ub-badge--ratp">RATP</span>
+          <span class="ub-badge ub-badge--ver">v1.0</span>
+        </div>
+        <h1 class="ub-title">SelfService Hoover</h1>
+        <p class="ub-subtitle">
+          Synchronisez automatiquement votre planning RATP depuis le portail SelfService
+          vers Google Calendar — sans rien faire, deux fois par jour.
+        </p>
+        <div class="ub-hero-actions">
+          <a href="#download" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Télécharger gratuitement
+          </a>
+          <a href="#guide" class="btn btn-ghost btn-lg">Voir le guide</a>
+        </div>
+        <p class="ub-req">Windows 10 / 11 · Compte RATP requis · Aucune installation</p>
+      </div>
+
+      <!-- HERO MOCKUP : calendrier aperçu -->
+      <div class="ub-hero-visual">
+        <div class="ssh-mockup">
+          <div class="ssh-mockup-bar">
+            <div class="ssh-mockup-dots"><span></span><span></span><span></span></div>
+            <span class="ssh-mockup-wintitle">SelfService Hoover</span>
+          </div>
+          <div class="ssh-mockup-tabs">
+            <div class="ssh-mock-tab">Connexions</div>
+            <div class="ssh-mock-tab">Sync</div>
+            <div class="ssh-mock-tab active">Aperçu</div>
+            <div class="ssh-mock-tab">Paramètres</div>
+            <div class="ssh-mock-tab">Journal</div>
+          </div>
+          <div class="ssh-mockup-body">
+            <div class="ssh-cal-month">Juin 2026</div>
+            <div class="ssh-cal-header">
+              <div class="ssh-cal-dow">LUN</div><div class="ssh-cal-dow">MAR</div>
+              <div class="ssh-cal-dow">MER</div><div class="ssh-cal-dow">JEU</div>
+              <div class="ssh-cal-dow">VEN</div><div class="ssh-cal-dow">SAM</div>
+              <div class="ssh-cal-dow">DIM</div>
+            </div>
+            <div class="ssh-cal-grid">
+              <!-- Semaine 1 -->
+              <div class="ssh-day ssh-day--jour"><div class="ssh-day-num">1</div><div class="ssh-day-code">RO006</div><div class="ssh-day-time">05:25→11:52</div></div>
+              <div class="ssh-day ssh-day--jour"><div class="ssh-day-num">2</div><div class="ssh-day-code">RO006</div><div class="ssh-day-time">05:25→11:52</div></div>
+              <div class="ssh-day ssh-day--jour"><div class="ssh-day-num">3</div><div class="ssh-day-code">RO006</div><div class="ssh-day-time">05:25→11:52</div></div>
+              <div class="ssh-day ssh-day--jour"><div class="ssh-day-num">4</div><div class="ssh-day-code">RO004</div><div class="ssh-day-time">04:55→11:19</div></div>
+              <div class="ssh-day ssh-day--jour"><div class="ssh-day-num">5</div><div class="ssh-day-code">RO003</div><div class="ssh-day-time">04:55→11:19</div></div>
+              <div class="ssh-day ssh-day--repos"><div class="ssh-day-num">6</div><div class="ssh-day-code">REPOS</div></div>
+              <div class="ssh-day ssh-day--repos"><div class="ssh-day-num">7</div><div class="ssh-day-code">REPOS</div></div>
+              <!-- Semaine 2 -->
+              <div class="ssh-day ssh-day--repos"><div class="ssh-day-num">8</div><div class="ssh-day-code">REPOS</div></div>
+              <div class="ssh-day ssh-day--jour"><div class="ssh-day-num">9</div><div class="ssh-day-code">RO004</div><div class="ssh-day-time">04:55→11:19</div></div>
+              <div class="ssh-day ssh-day--jour"><div class="ssh-day-num">10</div><div class="ssh-day-code">RO004</div></div>
+              <div class="ssh-day ssh-day--jour"><div class="ssh-day-num">11</div><div class="ssh-day-code">RO004</div></div>
+              <div class="ssh-day ssh-day--mixte"><div class="ssh-day-num">12</div><div class="ssh-day-code">E21</div><div class="ssh-day-time">14:00→21:00</div></div>
+              <div class="ssh-day ssh-day--mixte"><div class="ssh-day-num">13</div><div class="ssh-day-code">E21</div><div class="ssh-day-time">14:00→21:00</div></div>
+              <div class="ssh-day ssh-day--mixte"><div class="ssh-day-num">14</div><div class="ssh-day-code">E21</div><div class="ssh-day-time">14:00→21:00</div></div>
+            </div>
+          </div>
+          <div class="ssh-mockup-footer">
+            <div class="ssh-legend-item"><div class="ssh-legend-dot" style="background:#ef8080"></div>Jour</div>
+            <div class="ssh-legend-item"><div class="ssh-legend-dot" style="background:#5dde8b"></div>Mixte</div>
+            <div class="ssh-legend-item"><div class="ssh-legend-dot" style="background:var(--accent-2)"></div>Nuit</div>
+            <div class="ssh-legend-item"><div class="ssh-legend-dot" style="background:#ffd54f"></div>Formation</div>
+            <div class="ssh-legend-item"><div class="ssh-legend-dot" style="background:#74c0fc"></div>Repos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="ub-features">
+    <div class="container">
+      <div class="ub-features-grid">
+
+        <div class="ub-feat">
+          <div class="ub-feat-icon ub-feat-icon--purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Sync automatique</h3>
+          <p>Le logiciel se synchronise automatiquement à 5h et 14h chaque jour, en tâche de fond. Votre agenda est toujours à jour sans intervention.</p>
+        </div>
+
+        <div class="ub-feat">
+          <div class="ub-feat-icon ub-feat-icon--green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <h3>Calendrier visuel</h3>
+          <p>L'onglet Aperçu affiche votre planning mensuel avec un code couleur par type de service — Jour, Nuit, Mixte, Formation, Repos.</p>
+        </div>
+
+        <div class="ub-feat">
+          <div class="ub-feat-icon ub-feat-icon--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+              <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+              <line x1="1" y1="1" x2="23" y2="23"/>
+            </svg>
+          </div>
+          <h3>Mode furtif</h3>
+          <p>La récupération du planning se fait via un navigateur invisible. Aucune fenêtre ne s'ouvre pendant la synchronisation.</p>
+        </div>
+
+        <div class="ub-feat">
+          <div class="ub-feat-icon ub-feat-icon--red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h3>Sécurisé</h3>
+          <p>Vos identifiants RATP et le token Google sont stockés dans Windows Credential Manager. Aucune donnée n'est envoyée à un serveur tiers.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="ub-section ub-section--alt" id="apercu">
+    <div class="container">
+      <div class="ub-section-header">
+        <p class="section-label">Interface</p>
+        <h2 class="section-title">Aperçu de l'application</h2>
+      </div>
+      <div class="ssh-screenshots">
+
+        <div class="ub-screenshot-wrap">
+          <img src="assets/screenshots/ssh-connexions.png" alt="Onglet Connexions — RATP et Google Calendar" class="ub-screenshot" />
+          <div class="ub-screenshot-ph-content">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Onglet Connexions</span>
+          </div>
+          <p class="ub-screenshot-caption">Connexions — Identifiants RATP · Compte Google · Agenda cible</p>
+        </div>
+
+        <div class="ub-screenshot-wrap">
+          <img src="assets/screenshots/ssh-synchronisation.png" alt="Onglet Synchronisation — lancement et progression" class="ub-screenshot" />
+          <div class="ub-screenshot-ph-content">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Onglet Synchronisation</span>
+          </div>
+          <p class="ub-screenshot-caption">Synchronisation — Horaires auto · Plage manuelle · Barre de progression</p>
+        </div>
+
+        <div class="ub-screenshot-wrap">
+          <img src="assets/screenshots/ssh-apercu.png" alt="Onglet Aperçu — calendrier mensuel coloré" class="ub-screenshot" />
+          <div class="ub-screenshot-ph-content">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Onglet Aperçu</span>
+          </div>
+          <p class="ub-screenshot-caption">Aperçu — Calendrier mensuel avec code couleur par type de service</p>
+        </div>
+
+        <div class="ub-screenshot-wrap">
+          <img src="assets/screenshots/ssh-parametres.png" alt="Onglet Paramètres — thème, démarrage, notifications" class="ub-screenshot" />
+          <div class="ub-screenshot-ph-content">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Onglet Paramètres</span>
+          </div>
+          <p class="ub-screenshot-caption">Paramètres — Apparence · Démarrage Windows · Notifications · Vitesse scraper</p>
+        </div>
+
+        <!-- Journal — pleine largeur -->
+        <div class="ub-screenshot-wrap">
+          <img src="assets/screenshots/ssh-journal.png" alt="Onglet Journal — logs de synchronisation détaillés" class="ub-screenshot" />
+          <div class="ub-screenshot-ph-content">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Onglet Journal</span>
+          </div>
+          <p class="ub-screenshot-caption">Journal — Logs de synchronisation horodatés en temps réel</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE COMPLET -->
+  <section class="ub-section" id="guide">
+    <div class="container">
+      <div class="ub-section-header">
+        <p class="section-label">Documentation</p>
+        <h2 class="section-title">Guide d'utilisation</h2>
+        <p class="section-desc">Tout ce qu'il faut savoir pour installer et utiliser SelfService Hoover.</p>
+      </div>
+
+      <div class="ub-guide">
+
+        <!-- NAV GUIDE -->
+        <nav class="ub-guide-nav">
+          <a href="#g-intro"   class="ub-guide-nav-link active">Vue d'ensemble</a>
+          <a href="#g-install" class="ub-guide-nav-link">Installation</a>
+          <a href="#g-ratp"    class="ub-guide-nav-link">Connexion RATP</a>
+          <a href="#g-google"  class="ub-guide-nav-link">Connexion Google</a>
+          <a href="#g-agenda"  class="ub-guide-nav-link">Agenda cible</a>
+          <a href="#g-sync"    class="ub-guide-nav-link">Synchronisation</a>
+          <a href="#g-apercu"  class="ub-guide-nav-link">Aperçu</a>
+          <a href="#g-tray"    class="ub-guide-nav-link">System Tray</a>
+          <a href="#g-params"  class="ub-guide-nav-link">Paramètres</a>
+          <a href="#g-faq"     class="ub-guide-nav-link">FAQ</a>
+          <a href="#g-data"    class="ub-guide-nav-link">Confidentialité</a>
+        </nav>
+
+        <!-- CONTENU -->
+        <div class="ub-guide-content">
+
+          <!-- VUE D'ENSEMBLE -->
+          <div class="ub-guide-block" id="g-intro">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+              Qu'est-ce que SelfService Hoover ?
+            </h3>
+            <div class="ub-guide-body">
+              <p>SelfService Hoover est un logiciel Windows qui récupère automatiquement votre planning de travail RATP depuis le portail SelfService (GIRO) et le synchronise avec votre Google Calendar.</p>
+              <p>Une fois configuré, le logiciel tourne en arrière-plan et met à jour votre agenda automatiquement deux fois par jour (5h et 14h), sans que vous ayez à faire quoi que ce soit.</p>
+              <div class="ub-callout">
+                <strong>Prérequis :</strong> un compte RATP actif (matricule DB + mot de passe), un compte Google, Windows 10 ou 11, une connexion internet.
+              </div>
+            </div>
+          </div>
+
+          <!-- INSTALLATION -->
+          <div class="ub-guide-block" id="g-install">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </span>
+              Installation
+            </h3>
+            <div class="ub-guide-body">
+              <ol class="ub-steps">
+                <li>Téléchargez <kbd>SelfService Hoover.exe</kbd> ci-dessous.</li>
+                <li>Lancez le fichier — aucune installation n'est requise. L'exécutable est autonome.</li>
+                <li>Le logiciel s'installe automatiquement dans la barre des tâches (system tray, icône en bas à droite de l'écran).</li>
+                <li>La fenêtre principale s'ouvre automatiquement à la première utilisation. Elle est accessible à tout moment en cliquant sur l'icône dans le tray.</li>
+              </ol>
+              <div class="ub-callout ub-callout--info">
+                Windows peut afficher un avertissement SmartScreen à la première exécution. Cliquez sur <strong>"Informations complémentaires"</strong> puis <strong>"Exécuter quand même"</strong>.
+              </div>
+            </div>
+          </div>
+
+          <!-- CONNEXION RATP -->
+          <div class="ub-guide-block" id="g-ratp">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              Connexion RATP — Étape 1
+            </h3>
+            <div class="ub-guide-body">
+              <p>Connectez votre compte portail SelfService RATP pour que le logiciel puisse récupérer votre planning.</p>
+              <ol class="ub-steps">
+                <li>Ouvrez l'onglet <kbd>Connexions</kbd> → section <strong>Portail RATP</strong>.</li>
+                <li>Saisissez votre matricule (ex : DB224810) et votre mot de passe.</li>
+                <li>Cliquez <kbd>Sauvegarder</kbd>.</li>
+                <li>Cliquez <kbd>Tester la connexion</kbd> pour vérifier que les identifiants sont corrects.</li>
+              </ol>
+              <div class="ub-callout">
+                Les identifiants sont stockés de façon sécurisée dans <strong>Windows Credential Manager</strong> — le même système que vos mots de passe Wi-Fi et Windows. Ils ne sont jamais écrits en clair sur le disque.
+              </div>
+            </div>
+          </div>
+
+          <!-- CONNEXION GOOGLE -->
+          <div class="ub-guide-block" id="g-google">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.57 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6 6l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+              </span>
+              Connexion Google Calendar — Étape 2
+            </h3>
+            <div class="ub-guide-body">
+              <p>Autorisez le logiciel à accéder à votre Google Calendar via OAuth2 (aucun mot de passe Google n'est stocké).</p>
+              <ol class="ub-steps">
+                <li>Onglet <kbd>Connexions</kbd> → section <strong>Google Calendar</strong>.</li>
+                <li>Cliquez <kbd>Connecter Google</kbd>.</li>
+                <li>Une page web s'ouvre dans votre navigateur. Connectez-vous avec votre compte Google et autorisez l'accès.</li>
+                <li>Une fois autorisé, la page se ferme automatiquement et votre email apparaît dans l'application.</li>
+              </ol>
+              <div class="ub-callout ub-callout--info">
+                Le token OAuth2 est stocké dans Windows Credential Manager. Il peut être révoqué à tout moment depuis votre compte Google → Sécurité → Applications tierces.
+              </div>
+            </div>
+          </div>
+
+          <!-- AGENDA CIBLE -->
+          <div class="ub-guide-block" id="g-agenda">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+              Choisir l'agenda cible — Étape 3
+            </h3>
+            <div class="ub-guide-body">
+              <p>Définissez dans quel agenda Google les événements de travail seront créés.</p>
+              <div class="ub-compare">
+                <div class="ub-compare-col ub-compare-col--accent">
+                  <div class="ub-compare-label">Recommandé</div>
+                  <p><strong>Créer un nouvel agenda "Planning RATP"</strong> — crée un agenda dédié, séparé de votre agenda personnel. Facile à activer/désactiver dans Google Calendar.</p>
+                </div>
+                <div class="ub-compare-col">
+                  <div class="ub-compare-label">Avancé</div>
+                  <p><strong>Choisir un agenda existant</strong> — sélectionnez un agenda existant dans la liste déroulante. Les événements s'y ajouteront directement.</p>
+                </div>
+              </div>
+              <ol class="ub-steps">
+                <li>Onglet <kbd>Connexions</kbd> → section <strong>Agenda cible</strong>.</li>
+                <li>Choisissez l'option souhaitée.</li>
+                <li>Cliquez <kbd>Sauvegarder le choix d'agenda</kbd>.</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- SYNCHRONISATION -->
+          <div class="ub-guide-block" id="g-sync">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+              </span>
+              Lancer une synchronisation
+            </h3>
+            <div class="ub-guide-body">
+              <h4>Sync complète (première fois ou remise à zéro)</h4>
+              <ol class="ub-steps">
+                <li>Onglet <kbd>Synchronisation</kbd> → section <strong>Synchronisation manuelle</strong>.</li>
+                <li>Choisissez la plage : <strong>Personnalisé</strong> (ex : 300 jours) ou <strong>Planning complet</strong>.</li>
+                <li>Cliquez <kbd>Lancer la synchronisation</kbd>.</li>
+                <li>Suivez la progression dans l'onglet <kbd>Journal</kbd>.</li>
+              </ol>
+              <div class="ub-callout">
+                Durée estimée : <strong>5 à 10 minutes</strong> pour 10 mois de planning. La barre de progression indique le jour en cours de traitement.
+              </div>
+
+              <h4>Sync rapide (usage quotidien)</h4>
+              <p>Même procédure avec une plage de 7 jours — prend environ 1 à 2 minutes.</p>
+
+              <h4>Sync automatique</h4>
+              <p>Le logiciel se synchronise automatiquement selon les horaires configurés dans l'onglet <kbd>Synchronisation</kbd> → <strong>Synchronisation automatique</strong>. Vous pouvez activer/désactiver chaque horaire indépendamment.</p>
+              <p>Les dates de la dernière sync et de la prochaine sync auto sont affichées sous les horaires.</p>
+            </div>
+          </div>
+
+          <!-- APERÇU CALENDRIER -->
+          <div class="ub-guide-block" id="g-apercu">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+              Onglet Aperçu
+            </h3>
+            <div class="ub-guide-body">
+              <p>L'onglet Aperçu affiche votre planning sous forme de calendrier mensuel. Naviguez avec les flèches <kbd>◀</kbd> <kbd>▶</kbd> pour changer de mois.</p>
+              <p>Cliquez sur n'importe quel jour pour afficher le détail : code service, type, catégorie, horaires de début/fin.</p>
+
+              <h4>Code couleur</h4>
+              <div class="ssh-color-legend">
+                <div class="ssh-color-item"><div class="ssh-color-swatch" style="background:#ef8080"></div><span>Rose/Rouge — Service de jour</span></div>
+                <div class="ssh-color-item"><div class="ssh-color-swatch" style="background:var(--accent-2)"></div><span>Violet — Service de nuit</span></div>
+                <div class="ssh-color-item"><div class="ssh-color-swatch" style="background:#5dde8b"></div><span>Vert — Service mixte (jour + nuit)</span></div>
+                <div class="ssh-color-item"><div class="ssh-color-swatch" style="background:#ffd54f"></div><span>Jaune — Formation ou congé (GCA)</span></div>
+                <div class="ssh-color-item"><div class="ssh-color-swatch" style="background:#74c0fc"></div><span>Bleu — Repos</span></div>
+              </div>
+
+              <div class="ub-callout ub-callout--warn">
+                Les congés (GCA) sont uniquement visibles dans l'aperçu du logiciel (en jaune). Seuls les <strong>jours de travail</strong> sont exportés vers Google Calendar.
+              </div>
+            </div>
+          </div>
+
+          <!-- SYSTEM TRAY -->
+          <div class="ub-guide-block" id="g-tray">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </span>
+              Icône dans le System Tray
+            </h3>
+            <div class="ub-guide-body">
+              <p>L'icône en bas à droite de l'écran indique l'état des connexions :</p>
+              <div class="ub-options">
+                <div class="ub-option">
+                  <div class="ub-option-name">Point ROUGE</div>
+                  <div class="ub-option-desc">Non connecté — RATP ou Google non configuré.</div>
+                </div>
+                <div class="ub-option">
+                  <div class="ub-option-name">Point VERT</div>
+                  <div class="ub-option-desc">Connecté — les deux comptes sont actifs.</div>
+                </div>
+              </div>
+
+              <h4>Menu clic droit</h4>
+              <ul class="ub-list">
+                <li><strong>Ouvrir l'application</strong> — affiche la fenêtre principale</li>
+                <li><strong>Lancer une synchronisation</strong> — lance une sync manuelle immédiate</li>
+                <li><strong>Activer/désactiver la sync auto</strong> — bascule sans ouvrir l'app</li>
+                <li><strong>Activer/désactiver la sourdine</strong> — coupe les notifications temporairement</li>
+                <li><strong>Quitter</strong> — ferme complètement le logiciel</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- PARAMÈTRES -->
+          <div class="ub-guide-block" id="g-params">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </span>
+              Paramètres
+            </h3>
+            <div class="ub-guide-body">
+              <div class="ub-options">
+                <div class="ub-option">
+                  <div class="ub-option-name">Thème</div>
+                  <div class="ub-option-desc">Sombre (recommandé) ou Clair. Accessible aussi via le bouton en haut à droite de la fenêtre.</div>
+                </div>
+                <div class="ub-option">
+                  <div class="ub-option-name">Démarrage Windows</div>
+                  <div class="ub-option-desc">Lance le logiciel automatiquement au démarrage de Windows. Fortement recommandé pour profiter de la sync auto.</div>
+                </div>
+                <div class="ub-option">
+                  <div class="ub-option-name">Démarrer réduit</div>
+                  <div class="ub-option-desc">Au démarrage, le logiciel se place directement dans le tray sans afficher la fenêtre principale.</div>
+                </div>
+                <div class="ub-option">
+                  <div class="ub-option-name">Notification fin de sync</div>
+                  <div class="ub-option-desc">Affiche une notification Windows à la fin de chaque synchronisation avec le résumé des événements créés/modifiés.</div>
+                </div>
+                <div class="ub-option">
+                  <div class="ub-option-name">Alerte si pas de MAJ</div>
+                  <div class="ub-option-desc">Envoie une alerte si aucune synchronisation n'a eu lieu depuis le nombre d'heures configuré (par défaut 48h).</div>
+                </div>
+                <div class="ub-option">
+                  <div class="ub-option-name">Vitesse du scraper</div>
+                  <div class="ub-option-desc">Délai min/max entre les actions du navigateur invisible. Des délais plus longs rendent le scraping indiscernable d'un humain (recommandé : 2s / 4s).</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ -->
+          <div class="ub-guide-block" id="g-faq">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </span>
+              Questions fréquentes
+            </h3>
+            <div class="ub-guide-body">
+              <div class="ub-trigger-cards">
+
+                <div class="ub-trigger-card">
+                  <div class="ub-trigger-header">Le logiciel ouvre-t-il un navigateur pendant la sync ?</div>
+                  <p>Non. Le navigateur est invisible (mode furtif). Vous verrez uniquement la progression dans l'onglet Journal.</p>
+                </div>
+
+                <div class="ub-trigger-card">
+                  <div class="ub-trigger-header">Mes identifiants RATP sont-ils stockés de façon sécurisée ?</div>
+                  <p>Oui. Ils sont stockés dans Windows Credential Manager, le même système que vos mots de passe Wi-Fi et Windows.</p>
+                </div>
+
+                <div class="ub-trigger-card">
+                  <div class="ub-trigger-header">La sync modifie-t-elle mon agenda personnel Google ?</div>
+                  <p>Non, si vous avez choisi "Créer un nouvel agenda Planning RATP". Seul cet agenda dédié est modifié.</p>
+                </div>
+
+                <div class="ub-trigger-card">
+                  <div class="ub-trigger-header">Que se passe-t-il si mon mot de passe RATP change ?</div>
+                  <p>Mettez à jour votre mot de passe dans l'onglet Connexions et relancez une synchronisation.</p>
+                </div>
+
+                <div class="ub-trigger-card">
+                  <div class="ub-trigger-header">Les congés (GCA) apparaissent-ils dans Google Calendar ?</div>
+                  <p>Non. Les congés sont uniquement visibles dans l'aperçu du logiciel (en jaune). Seuls les jours de travail sont exportés vers Google Calendar.</p>
+                </div>
+
+                <div class="ub-trigger-card">
+                  <div class="ub-trigger-header">L'application consomme-t-elle beaucoup de ressources ?</div>
+                  <p>Non. En dehors des syncs, elle consomme moins de 50 Mo de RAM et quasiment pas de CPU.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- DONNÉES & CONFIDENTIALITÉ -->
+          <div class="ub-guide-block" id="g-data">
+            <h3 class="ub-guide-title">
+              <span class="ub-guide-icon ub-guide-icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              Données & confidentialité
+            </h3>
+            <div class="ub-guide-body">
+              <p>Toutes les données sont stockées <strong>localement sur votre machine</strong>. Aucune donnée n'est envoyée vers un serveur tiers.</p>
+
+              <h4>Fichiers locaux</h4>
+              <div class="ssh-data-table">
+                <div class="ssh-data-row">
+                  <div class="ssh-data-key">%APPDATA%\SelfServiceHoover\config.json</div>
+                  <div class="ssh-data-val">Paramètres de l'application</div>
+                </div>
+                <div class="ssh-data-row">
+                  <div class="ssh-data-key">%APPDATA%\SelfServiceHoover\planning_cache.json</div>
+                  <div class="ssh-data-val">Cache du planning (onglet Aperçu)</div>
+                </div>
+                <div class="ssh-data-row">
+                  <div class="ssh-data-key">%APPDATA%\SelfServiceHoover\session_cookies.json</div>
+                  <div class="ssh-data-val">Cookies de session RATP</div>
+                </div>
+                <div class="ssh-data-row">
+                  <div class="ssh-data-key">Credential Manager · SelfServiceHoover_RATP</div>
+                  <div class="ssh-data-val">Identifiants RATP chiffrés</div>
+                </div>
+                <div class="ssh-data-row">
+                  <div class="ssh-data-key">Credential Manager · SelfServiceHoover_GOOGLE</div>
+                  <div class="ssh-data-val">Token Google OAuth2</div>
+                </div>
+              </div>
+
+              <h4>Communications réseau</h4>
+              <p>Le logiciel communique uniquement avec :</p>
+              <ul class="ub-list">
+                <li><strong>Le portail RATP</strong> — <code>selfservicerer.ratp.net</code></li>
+                <li><strong>L'API Google Calendar</strong> — <code>googleapis.com</code></li>
+              </ul>
+
+              <h4>Désinstallation complète</h4>
+              <ol class="ub-steps">
+                <li>Quittez l'application (clic droit tray → Quitter).</li>
+                <li>Supprimez le fichier <code>SelfService Hoover.exe</code>.</li>
+                <li>Supprimez le dossier <code>%APPDATA%\SelfServiceHoover\</code> (optionnel).</li>
+                <li>Dans le Gestionnaire d'informations d'identification Windows, supprimez les entrées <code>SelfServiceHoover_RATP</code> et <code>SelfServiceHoover_GOOGLE</code> (optionnel).</li>
+              </ol>
+            </div>
+          </div>
+
+        </div><!-- /ub-guide-content -->
+      </div><!-- /ub-guide -->
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="ub-section ub-section--download" id="download">
+    <div class="container">
+      <div class="ub-download-box">
+        <div class="glow glow-contact"></div>
+        <div class="ub-download-inner">
+          <div class="ub-download-info">
+            <p class="section-label">Téléchargement</p>
+            <h2 class="ub-download-title">SelfService Hoover v1.0</h2>
+            <div class="ub-download-meta">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                Windows 10 / 11
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                ~96 MB
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                Gratuit
+              </span>
+            </div>
+          </div>
+          <div class="ub-download-btns">
+            <a href="https://github.com/Darioo2/Site-DarioCraft/releases/download/ssh-v1.0/SelfService%20Hoover.exe" class="btn btn-primary btn-lg ub-download-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Télécharger .exe
+            </a>
+            <a href="https://github.com/Darioo2/Site-DarioCraft/releases/download/ssh-v1.0/SelfService%20Hoover.zip" class="btn btn-ghost ub-download-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              .zip
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="nav-logo">Dario<span>Craft</span></a>
+      <p class="footer-copy">&copy; 2026 DarioCraft — Tous droits réservés</p>
+      <div class="footer-links">
+        <a href="index.html#logiciels">Logiciels</a>
+        <a href="index.html#jeux">Jeux</a>
+        <a href="index.html#about">À propos</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-backdrop"></div>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="lightbox-inner">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/selfservice-hoover.js"></script>
+</body>
+</html>
