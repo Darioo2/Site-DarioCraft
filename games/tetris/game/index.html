@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0f0f1a" />
+  <title>Tetris — DarioCraft</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="bg" class="bg-canvas"></canvas>
+  <div class="app">
+    <header class="topbar">
+      <div id="topbar-logo" class="topbar-logo"></div>
+      <div class="top-actions">
+        <button id="mute-btn" class="icon-btn" title="Son (M)">🔊</button>
+        <button id="pause-btn" class="icon-btn" title="Pause (P)">⏸</button>
+      </div>
+    </header>
+
+    <main class="playfield">
+      <!-- Colonne gauche : HOLD + stats -->
+      <aside class="side side-left">
+        <div class="panel panel-hold">
+          <h3>Réserve <span class="key-hint">C</span></h3>
+          <canvas id="hold" width="96" height="96"></canvas>
+        </div>
+        <div class="panel stats">
+          <div class="stat"><span>Score</span><b id="score">0</b></div>
+          <div class="stat"><span>Record</span><b id="best">0</b></div>
+        </div>
+      </aside>
+
+      <!-- Plateau central -->
+      <div class="board-wrap">
+        <canvas id="board"></canvas>
+        <span class="credit-ingame">Développé par Dario</span>
+        <div id="overlay" class="overlay hidden"></div>
+      </div>
+
+      <!-- Colonne droite : NEXT + niveau/lignes -->
+      <aside class="side side-right">
+        <div class="panel">
+          <h3>Suivant</h3>
+          <canvas id="next" width="96" height="96"></canvas>
+        </div>
+        <div class="panel stats">
+          <div class="stat"><span>Niveau</span><b id="level">1</b></div>
+          <div class="stat"><span>Lignes</span><b id="lines">0</b></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="hint-bar">
+      ← → déplacer &nbsp;·&nbsp; ↑ tourner &nbsp;·&nbsp; ↓ descendre &nbsp;·&nbsp; Espace chute &nbsp;·&nbsp; C réserve &nbsp;·&nbsp; P pause
+    </footer>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
